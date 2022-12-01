@@ -65,6 +65,7 @@ p, span {
     font-weight: 400;
     font-size: 20px;
     line-height: 22px;
+    text-align: start;
 }
 
 .main_section {
@@ -181,17 +182,19 @@ p, span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .section_title h2 {
     font-size: 45px;
     line-height: 53px;
-    padding: 18px 0 25px 0;
+    padding: 5px 0 20px 0;
 }
 
 .card_flex {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     font-size: 25px;
     line-height: 29px;
@@ -200,7 +203,7 @@ p, span {
 }
 
 .card_content {
-    padding: 20px 70px;
+    padding: 20px 50px;
 }
 
 .card_content img {
@@ -217,14 +220,14 @@ p, span {
 .info_bar {
     display: flex;
     justify-content: space-evenly;
+    padding: 20px 0;
 }
 
 .row_text {
     width: 40%;
     text-align: left;
     align-self: center;
-    padding: 5rem 0;
-    margin: 1rem;
+    padding: 7.5rem 0;
 }
 
 .row_text h1 {
@@ -256,13 +259,13 @@ p, span {
 
 .cards_small_flex {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    padding: 4.25rem;
 }
 
 .cards_small_flex ul {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -273,24 +276,21 @@ p, span {
     filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.25));
 }
 
-.cards_small_item img {
-    opacity: 0.90;
-}
-
 .cards_small_text {
     background-color: #FFFFFF;
     padding-bottom: 16px;
 }
 
 .btn_outline {
-    padding: 1.75rem;
+    padding-top: 5rem;
 }
 
 .btn_outline button {
     color: #FFFFFF;
     background-color: transparent;
     border: 2.5px solid #FFFFFF;
-    padding: 15px 45px;
+    padding: 15px 35px;
+    cursor: pointer;
     font-size: 18px;
     font-weight: 700;
 }
@@ -368,6 +368,7 @@ input {
     color: #292929;
     background-color: #FFFFFF;
     border: 2.5px solid #292929;
+    cursor: pointer;
     padding: 15px 21px;
     width: 100%;
     margin-top: 10px;
@@ -513,4 +514,48 @@ input {
         max-width: 415px;
         min-width: 400px;
     }
+
+    .card_content {
+        padding: 0;
+    }
+
+    .cards_small_flex {
+        padding: 0;
+    }
+
+    .cards_small_item {
+        width: 240px;
+        padding: 10px;
+    }
+
+    .cards_small_text h4 {
+        padding: 8px;
+    }
+
+    .cards_small_text h4,span {
+        font-size: 18px;
+    }
+
+    .btn_outline {
+        padding: 4.5rem;
+    }
+
+    .btn_outline button {
+        color: #FFFFFF;
+        background-color: transparent;
+        border: 2.5px solid #FFFFFF;
+        padding: 12px 26px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .info_bar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0;
+    }
+
 }
