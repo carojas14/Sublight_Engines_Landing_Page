@@ -12,6 +12,7 @@
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mobile.css">
 
     <!--  GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +33,21 @@
                     <li class="menu_item"><a href="#about_us">ABOUT US</a></li>
                     <li class="menu_item"><a href="#contact_us">CONTACT US</a></li>
                 </ul>
+
+                <div class="burger_menu">
+                    <div class="burger_line"></div>
+                    <div class="burger_line"></div>
+                    <div class="burger_line"></div>
+                </div>
             </nav>
+        </div>
+        <div class="hidden_menu">
+            <ul class="top_nav_burger">
+                <li class="menu_item"><a href="#services">OUR SERVICES</a></li>
+                <li class="menu_item"><a href="#products">PRODUCTS</a></li>
+                <li class="menu_item"><a href="#about_us">ABOUT US</a></li>
+                <li class="menu_item"><a href="#contact_us">CONTACT US</a></li>
+            </ul>
         </div>
 
     </header>
@@ -106,7 +121,7 @@
         <section id="products" class="main_section orange_background">
             <header class="section_title">
                 <h1>NEED MORE FOR YOUR FLEET OF ELEVATORS</h1>
-                <h2>ALL OUR PRODUCTS ARE MADE <br> WITH HEART AND SOUL</h2>
+                <h2 class="products_title">ALL OUR PRODUCTS ARE MADE WITH HEART AND SOUL</h2>
                 <div>
                     <img src="assets/img/separator_black.svg" alt="separator black">
                 </div>
@@ -176,31 +191,35 @@
                 </div>
             </header>
             <div class="contact_form">
-                <form>
+                <form data-js-form>
                     <div>
                         <label for="name">NAME *</label><br>
-                        <input type="text" id="name" placeholder="Enter your full name">
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required data-field>
+                        <small></small>
                     </div>
                     <div>
                         <label for="email">EMAIL ADDRESS *</label><br>
-                        <input type="text" id="email" placeholder="yourname@company.com">
+                        <input type="email" id="email" name="email" placeholder="yourname@company.com" required data-field>
+                        <small></small>
                     </div>
                     <div class="form_columns">
                         <div class="column_left">
                             <label for="phone">NUMBER</label><br>
-                            <input type="text" id="phone" placeholder="0 (000) 000 -000">
+                            <input type="text" id="phone" name="phone" placeholder="0 (000) 000 -000" required data-field>
+                            <small></small>
                         </div>
                         <div class="column_right">
                             <label for="language">PREFERRED LANGUAGE</label><br>
-                            <select name="language" id="language">
+                            <select name="language" id="language" data-field>
                                 <option value="">Select</option>
                                 <option value="french">French</option>
                                 <option value="english">English</option>
                             </select>
+                            <small></small>
                         </div>
                     </div>
                     <div class="btn_submit">
-                        <button type="button" id="btnSubmit" value="click">SUBMIT</button>
+                        <button type="button" id="btnSubmit" value="click" data-submit>SUBMIT</button>
                     </div>
                 </form>
             </div>
