@@ -201,7 +201,7 @@ p, span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 35rem;
+    padding: 2rem 20rem;
 }
 
 .section_title h2 {
@@ -218,7 +218,7 @@ p, span {
     font-size: 25px;
     line-height: 29px;
     color: #FFFFFF;
-
+    padding-bottom: 2rem;
 }
 
 .card_content {
@@ -468,6 +468,16 @@ small {
     text-align: end;
 }
 
+.rightside_footer  p{
+    text-align: right;
+}
+
+.main_footer p {
+    font-size: 22px;
+    line-height: 26px;
+    padding: 0 14px;
+}
+
 .copyright {
     text-align: center;
     padding: 0 0 3rem 0;
@@ -507,7 +517,7 @@ small {
 /* Portable (~1150px to ~1700px) */
 @media all and (min-width:1150px) and (max-width:1700px){
     .main_section {
-        padding: 2em;
+        padding: 2.5em;
     }
 
     .top_nav_links li a {
@@ -533,7 +543,7 @@ small {
     }
 
     .cards_small_item {
-        width: 240px;
+        width: 210px;
         padding: 10px;
     }
 
@@ -543,6 +553,10 @@ small {
 
     .cards_small_text h4,span {
         font-size: 18px;
+    }
+
+    .section_title {
+        padding: 2rem 15rem;
     }
 
     .btn_outline {
