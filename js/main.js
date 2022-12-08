@@ -22,7 +22,23 @@
             let validation = valideForm(form);
 
             if (validation) {
-                alert("This is awesome!")
+                alert("Thanks for getting in touch. We'll be in contact soon!")
+
+                // let SERVICE_ID = 'default_service',
+                //     TEMPLATE_ID = 'template_iizd2hm',
+                //     templateParams = {
+                //         to_name: nameCustomer,
+                //         from_name: 'Sublight Engines',
+                //         message: 'Thanks for getting in touch.',
+                //         to_email: email
+                //     };
+
+                // emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
+                //     .then(function(response) {
+                //         console.log('SUCCESS!', response.status, response.text);
+                //     }, function(error) {
+                //         console.log('FAILED...', error);
+                //     });
             }
 
         });
@@ -30,6 +46,9 @@
         valideForm = (form) => {
 
             let isValid = true;
+            let to_name = ''
+            let to_email = ''
+            let to_phone = ''
 
             let data = form.querySelectorAll('[data-field]');
 
@@ -52,9 +71,10 @@
 
                 if (data[i].name == 'name') {
                     if (data[i].value != '') {
-                        let name = data[i].value;
+                        let nameCustomer = data[i].value;
+                            to_name = nameCustomer;
 
-                        if (nameRegex.test(name)) {
+                        if (nameRegex.test(nameCustomer)) {
                             message.textContent = ''
                         }
                         else {
@@ -69,6 +89,7 @@
                 if (data[i].name == 'email') {
                     if (data[i].value != '') {
                         let email = data[i].value;
+                        to_email = email;
 
                         if (emailRegex.test(email)) {
                             message.textContent = ''
@@ -85,6 +106,7 @@
                 if (data[i].name == 'phone') {
                     if (data[i].value != '') {
                         let phone = data[i].value;
+                        to_phone = phone;
 
                         if (phoneRegex.test(phone)) {
                             message.textContent = ''
@@ -109,6 +131,23 @@
                     }
                 }
             }
+
+            let SERVICE_ID = 'default_service',
+                TEMPLATE_ID = 'template_iizd2hm',
+                templateParams = {
+                    to_name,
+                    from_name: 'Sublight Engines',
+                    message: 'Thanks for getting in touch on Sublight Engines. We are excited to have you on board and will be happy to help you. We will contact you soon at',
+                    to_phone,
+                    to_email
+                };
+
+            emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
 
             return isValid;
 
