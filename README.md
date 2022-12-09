@@ -16,7 +16,7 @@ This version of the website is a single landing page. Starting from a model prov
 This is the address of my website accessible on the internet: https://rocketelevatorsbycr.xyz/
 
 
-## Week Front-End : Front-End - Javascript. Responsiveness and SEO
+## Week Front-End : CSS - Javascript. Responsiveness and SEO
 
 Continuing with last week’s project to make the landing page responsive. A Figma model of iPhone 13/13 Pro is provided.
 Using Javascript and CSS the responsive website include the following elements:
