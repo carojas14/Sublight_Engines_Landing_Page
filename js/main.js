@@ -56,10 +56,10 @@
                 if (data[i].name == 'name') {
                     if (data[i].value != '') {
                         let nameCustomer = data[i].value;
-                            to_name = nameCustomer;
 
                         if (nameRegex.test(nameCustomer)) {
                             message.textContent = ''
+                            to_name = nameCustomer;
                         }
                         else {
                             message.textContent = 'Not a valid name';
@@ -73,10 +73,10 @@
                 if (data[i].name == 'email') {
                     if (data[i].value != '') {
                         let email = data[i].value;
-                        to_email = email;
 
                         if (emailRegex.test(email)) {
                             message.textContent = ''
+                            to_email = email;
                         }
                         else {
                             message.textContent = 'Not a valid email';
@@ -90,10 +90,10 @@
                 if (data[i].name == 'phone') {
                     if (data[i].value != '') {
                         let phone = data[i].value;
-                        to_phone = phone;
 
                         if (phoneRegex.test(phone)) {
                             message.textContent = ''
+                            to_phone = phone;
                         }
                         else {
                             message.textContent = 'Not a valid phone';
