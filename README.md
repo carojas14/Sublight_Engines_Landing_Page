@@ -24,6 +24,7 @@ Using Javascript and CSS the responsive website include the following elements:
 - A navigation section fixed when the user scrolls down.
 - A hamburger menu for the menu to appear underneath the header bar.
 - A new fixed Call to Action (CTA) button positioned at the bottom of the screen.
+- A validation form with an error message explaining what needs to be corrected
 
 
 ###  EmailJS
