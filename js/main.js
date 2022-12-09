@@ -23,22 +23,6 @@
 
             if (validation) {
                 alert("Thanks for getting in touch. We'll be in contact soon!")
-
-                // let SERVICE_ID = 'default_service',
-                //     TEMPLATE_ID = 'template_iizd2hm',
-                //     templateParams = {
-                //         to_name: nameCustomer,
-                //         from_name: 'Sublight Engines',
-                //         message: 'Thanks for getting in touch.',
-                //         to_email: email
-                //     };
-
-                // emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
-                //     .then(function(response) {
-                //         console.log('SUCCESS!', response.status, response.text);
-                //     }, function(error) {
-                //         console.log('FAILED...', error);
-                //     });
             }
 
         });
